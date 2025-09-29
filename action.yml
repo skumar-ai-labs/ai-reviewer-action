@@ -1,0 +1,10 @@
+name: 'AI Reviewer Action'
+description: 'LLM-assisted code review and test generation'
+author: 'skumar-ai-labs'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+inputs:
+  github-token:
+    description: 'GitHub token'
+    required: true
