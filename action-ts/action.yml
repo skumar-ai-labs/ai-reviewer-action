@@ -1,0 +1,10 @@
+name: 'AI Reviewer Action (Java Core)'
+description: 'Thin TS action calling Java core via HTTP'
+author: 'skumar-ai-labs'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+inputs:
+  core-url:
+    description: 'Base URL of the Java reviewer service'
+    required: true

@@ -1,13 +1,14 @@
-# AI Reviewer Action
+# AI Reviewer (Java Core + Thin GitHub Action)
 
-![Build](https://github.com/skumar-ai-labs/ai-reviewer-action/actions/workflows/ci.yml/badge.svg)
-![License](https://img.shields.io/github/license/skumar-ai-labs/ai-reviewer-action)
+brew install gradle (if no gradle)
 
-A GitHub Action that performs **LLM-assisted code reviews** and can **generate unit test skeletons**.
+gradle wrapper (only first time)
 
-## Quick Start
-```bash
+# Run Java service
+cd core-java
+./gradlew bootRun
+
+# Test Action (in another terminal)
+cd ../action-ts
 npm install
-npm run build
-npm test
-```
+CORE_URL=http://localhost:8080 npm run build && node dist/index.js
